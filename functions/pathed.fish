@@ -4,7 +4,7 @@ function pathed --description 'Edit fish_user_paths'
         set editor $VISUAL
     else if set -q EDITOR
         set editor $EDITOR
-    else if type vi > /dev/null
+    else if type vi >/dev/null
         set editor vi
     else
         echo 'Set your editor to $VISUAL or $EDITOR'
@@ -14,7 +14,7 @@ function pathed --description 'Edit fish_user_paths'
     set -l tempfile (mktemp)
 
     for p in $fish_user_paths
-        echo $p >> $tempfile
+        echo $p >>$tempfile
     end
 
     if not eval $editor $tempfile
@@ -36,4 +36,3 @@ function pathed --description 'Edit fish_user_paths'
 
     rm $tempfile
 end
-
