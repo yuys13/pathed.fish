@@ -22,7 +22,7 @@ function pathed --description 'Edit fish_user_paths'
         return 1
     end
 
-    set l edited
+    set -l edited
     for p in (cat $tempfile)
         set edited $edited $p
     end
