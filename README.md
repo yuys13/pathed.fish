@@ -11,9 +11,9 @@ fisher install yuys13/pathed.fish
 ## Usage
 
 1. Set /path/to/your/editor to `$VISUAL` or `$EDITOR`
-2. Execute 'pathed' function
+2. Execute `pathed` function
 3. Edit paths with editor(one path per line)
-4. Quit the editor, edited paths apply to '$fish_user_paths'
+4. Quit the editor, edited paths apply to `$fish_user_paths`
 
 ## Description
 
