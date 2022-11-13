@@ -8,7 +8,7 @@ function pathed --description 'Edit fish_user_paths'
         set editor vi
     else
         echo 'Set your editor to $VISUAL or $EDITOR'
-        return 1
+        return 3
     end
 
     set -l tempfile (mktemp)
@@ -19,7 +19,7 @@ function pathed --description 'Edit fish_user_paths'
 
     if not eval $editor $tempfile
         echo "edit failed"
-        return 1
+        return 4
     end
 
     set -l edited
